@@ -9,7 +9,7 @@ get '/' do
   "Errors is a simple service that allows you to test that your front-end code handles error codes properly"
 end
 
-get '/e/:code' do
+get '/k/:code' do
   reg = /^\d+$/
   
   if (reg.match(params[:code]))
