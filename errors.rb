@@ -1,10 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 
-get '*favicon.ico' do
-  
-end
-
 get '/' do
   "Errors is a simple service that allows you to test that your front-end code handles error codes properly"
 end
