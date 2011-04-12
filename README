@@ -1,22 +1,19 @@
-----------------------------
-|          Errors          |
-----------------------------
+---------------------------
+|          Kodes          |
+---------------------------
 
-Errr... Errors?
-
-Yup, Errors is a simple app that was initially designed to
-allow testing of front-end ajax calls against error responses,
-to be sure all error cases are treated and rendered correctly.
-
-It's a dead simple tool, and you can also test success HTTP
-codes and other redirects, but the name stayed!
-
+Kodes is a simple app that is designed to
+allow testing of front-end ajax response handlers
+against HTTP status codes, to be sure all cases,
+error, redirects etc, are treated and rendered
+correctly.
 
 = INSTALLATION =
 
-Download, clone, copy/paste are all methods you can use.
+Download, clone, copy/paste are all methods you
+can use.
 
-git clone git@github.com:ekynoxe/errors.git
+git clone git@github.com:ekynoxe/kodes.git
 
 
 = RUNNING =
