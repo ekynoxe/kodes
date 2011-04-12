@@ -1,0 +1,14 @@
+<p>kodes is a simple service that allows you to test that your front-end code handles error codes properly</p>
+<h3>redirect your code to a url in the following format</h3>
+<p><%= url('/') %><span class="orange">&lt;http-code&gt;</span></p>
+<h3>try some of them</h3>
+<p>
+<ul>
+	<li><a href="<%= url('/k/201') %>"><%= url('/') %>201</a></li>
+	<li><a href="<%= url('/k/403') %>"><%= url('/') %>403</a></li>
+	<li><a href="<%= url('/k/405') %>"><%= url('/') %>405</a></li>
+	<li><a href="<%= url('/k/500') %>"><%= url('/') %>500</a></li>
+	<li><a href="<%= url('/k/504') %>"><%= url('/') %>504</a></li>
+</ul>
+</p>
+<small>Check your browser console for the http status of the response</small>
