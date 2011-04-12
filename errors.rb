@@ -9,7 +9,6 @@ get '/k/:code' do
   reg = /^\d+$/
   
   if (reg.match(params[:code]))
-    puts 'will halt with '+params[:code]
     halt params[:code].to_i, params[:code]
   else
     raise Sinatra::NotFound
