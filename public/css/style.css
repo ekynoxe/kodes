@@ -21,7 +21,7 @@ nav ul { list-style:none; }
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none;}
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
 del { text-decoration: line-through; }
@@ -144,6 +144,13 @@ header{
 	color: #f00;
 }
 #box h2{font-size: 35px;}
+
+#box a:hover{
+	background: #f00;
+	color: #fff;
+	padding: 2px 7px;
+	text-decoration: none;
+}
 center{
 	border: 1px dotted #ccc;
 	padding: 12px 0;
@@ -162,8 +169,7 @@ center{
 	text-decoration: none;
 }
 	#box ul li a:hover{
-		background: #f00;
-		color: #fff;
+		padding: 10px 13px;
 	}
 footer{
 	color: #999;
