@@ -1,2 +1,2 @@
-require 'errors'
+require 'kodes'
 run Sinatra::Application

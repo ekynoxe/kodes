@@ -24,7 +24,7 @@ git clone git@github.com:ekynoxe/kodes.git
 
 * Run!
 
-	ruby errors.rb
+	ruby kodes.rb
 
 
 = CREDITS =
