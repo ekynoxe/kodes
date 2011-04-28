@@ -66,9 +66,9 @@ input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 
 .no-boxshadow input:invalid, 
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection{ background: #f90; color:#fff; text-shadow: none; }
-::selection { background:#f90; color:#fff; text-shadow: none; } 
-a:link { -webkit-tap-highlight-color: #f90; } 
+::-moz-selection{ background: #f00; color:#fff; text-shadow: none; }
+::selection { background:#f00; color:#fff; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: #f00; } 
 
 button {  width: auto; overflow: visible; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
@@ -87,7 +87,7 @@ button {  width: auto; overflow: visible; }
 
 
  /* Primary Styles
-    Author: Mathieu Davy
+    Author: Mathieu Davy - http://ekynoxe.com
  */
 
 html{background-color: #dedede;}
@@ -97,7 +97,7 @@ body{
 	margin: 0 auto 50px;
 	width: 500px;
 }
-.orange{color: #f90;}
+.coloured{color: #f00;}
 h1, h2{
 	color: #ccc;
 	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
@@ -141,7 +141,7 @@ header{
 }
 #box h1,
 #box h2{
-	color: #f90;
+	color: #f00;
 }
 #box h2{font-size: 35px;}
 center{
@@ -162,7 +162,7 @@ center{
 	text-decoration: none;
 }
 	#box ul li a:hover{
-		background: #f90;
+		background: #f00;
 		color: #fff;
 	}
 footer{
