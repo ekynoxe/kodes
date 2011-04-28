@@ -77,8 +77,12 @@ button {  width: auto; overflow: visible; }
 .hidden { display: none; visibility: hidden; } 
 .visuallyhidden { position: absolute !important; clip: rect(1px 1px 1px 1px);  clip: rect(1px, 1px, 1px, 1px); }
 .invisible { visibility: hidden; }
-.clearfix:before, .clearfix:after {  content: "\0020"; display: block; height: 0; visibility: hidden;	 } 
-.clearfix:after { clear: both; }
+.clearfix:before, .clearfix:after,
+#box:before, #box:after,
+#box ul:before, #box ul:after {  content: "\0020"; display: block; height: 0; visibility: hidden;	 } 
+.clearfix:after,
+#box:after,
+#box ul:after { clear: both; }
 .clearfix { zoom: 1; }
 
 
@@ -88,14 +92,13 @@ button {  width: auto; overflow: visible; }
 
 html{background-color: #dedede;}
 body{
+	font-family:Cambria,'Palatino Linotype','Book Antiqua','URW Palladio L',serif;
 	font-size: 15px;
 	margin: 0 auto 50px;
 	width: 500px;
 }
-.orange{
-	color: #f90;
-}
-h1{
+.orange{color: #f90;}
+h1, h2{
 	color: #ccc;
 	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
 	font-size: 55px;
@@ -136,7 +139,32 @@ header{
 	box-shadow: 0 0 5px #ccc;
 	padding: 30px;
 }
-#box h1{color: #f90;}
+#box h1,
+#box h2{
+	color: #f90;
+}
+#box h2{font-size: 35px;}
+center{
+	border: 1px dotted #ccc;
+	padding: 12px 0;
+}
+#box ul{
+	list-style-type: none;
+	margin: 0;
+}
+#box ul li a{
+	display: block;
+	float: left;
+	font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+	font-size: 18px;
+	letter-spacing: -1px;
+	padding: 10px 13px;
+	text-decoration: none;
+}
+	#box ul li a:hover{
+		background: #f90;
+		color: #fff;
+	}
 footer{
 	color: #999;
 	font-size: 70%;
