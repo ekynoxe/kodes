@@ -1,5 +1,6 @@
-<h1><%= @code %></h1>
-
+<h1><%= @code %> <small><%= CODES[@code]['name'] unless CODES[@code].nil? %></small></h1>
+<%= '<p>'+CODES[@code]['description']+'</p>' unless (CODES[@code].nil? || CODES[@code]['description'].nil?) %>
+<%= '<p><a href="'+CODES[@code]['link']+'">more details</a></p>' unless (CODES[@code].nil? || CODES[@code]['link'].nil?) %>
 <p>
 	<small>Check your browser console for the http status of the response</small>
 </p>

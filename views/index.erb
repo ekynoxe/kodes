@@ -5,8 +5,8 @@
 <p>The response you get will have the required HTTP status code, as well as a description of the code itself if you forgot it!</p>
 <h2>try them!</h2>
 <ul>
-	<% CODES.each do |k| %>
-	<li><a href="<%= url('/k/'+k) %>"><%= k %></a></li>
+	<% CODES.each do |index,k| %>
+	<li><a href="<%= url('/k/'+index.to_s) %>"><%= index.to_s %></a></li>
 	<% end %>
 </ul>
 <p>
