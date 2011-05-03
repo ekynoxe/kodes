@@ -5,7 +5,10 @@ require 'erb'
 require 'yaml'
 
 ### Configuration
-CODES = YAML.load_file('kodes.yml').sort
+## => sorting the HTTP status codes after reading them from the yaml file
+CONF_CODES = YAML.load_file('kodes.yml')
+CODES = Hash.new
+CONF_CODES.keys.sort_by {|key| key.to_i}.each {|key| CODES[key] = CONF_CODES[key]}
 
 ### Controllers
 get '/' do
@@ -14,13 +17,12 @@ end
 
 get '/k/:code' do
   reg = /^\d+$/
-  
   if !reg.match(params[:code]) || !CODES.has_key?(params[:code].to_i)
     raise Sinatra::NotFound
     return
   end
   
-# Todo - Here should be handlers to take care of each code specifics if required
+# Todo - Here should be handlers to take care of each code specifics if required (eg 1xx that doesn't return anything in a browser')
   @code = params[:code].to_i
   status @code
   
@@ -28,8 +30,6 @@ get '/k/:code' do
 end
 
 ### Error handling
-# Todo - This needs to be differentiated so that when the 404 is *really requested* it
-# => renders the normal view without the "real 404 message"
 not_found do
   @code = 404
   
