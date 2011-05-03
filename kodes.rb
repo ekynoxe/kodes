@@ -5,7 +5,7 @@ require 'erb'
 require 'yaml'
 
 ### Configuration
-CODES = YAML.load_file('kodes.yml')
+CODES = YAML.load_file('kodes.yml').sort
 
 ### Controllers
 get '/' do
