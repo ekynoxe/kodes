@@ -7,11 +7,10 @@ require 'yaml'
 ### Configuration
 ## => sorting the HTTP status codes after reading them from the yaml file
 CODES = YAML.load_file('kodes.yml')
-puts CODES
 
 ### Controllers
 get '/' do
-  @codes = CODES.sort_by {|key,obj| puts key}
+  @codes = CODES.sort_by {|key,value| key}
   erb :index
 end
 
