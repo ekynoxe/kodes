@@ -187,6 +187,56 @@ footer{
 }
 
 @media screen and (max-device-width: 480px) {
+	body{
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+	}
+	h1{
+		font-size: 30px;
+		letter-spacing: -3px;
+		margin-left: 20px;
+	}
+		header{
+			margin: 5px 0 0;
+		}
+			header h1{
+				font-size: 400%;
+				z-index: 0;
+			}
+				header h1 a,
+				header h1 a:visited{
+					color: #c5c5c5;
+				}
+			header nav .home_link,
+			footer .logout_link{display: block;}
+			footer .logout_link{color: #f00; float: right;}
+	#box{
+		background-color: #fff;
+		border: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 20px 0;
+		width: 100%;
+	}
+		#box p{
+			padding: 5px 10px;
+		}
+		#box ul{
+			margin: 0 10px;
+		}
+			#box ul li small{
+				white-space: nowrap;
+			}
+			#box ul li small a{
+				display: inline-block;
+			}
+
+	footer{
+		margin-bottom: 10px;
+		padding: 0 10px;
+	}
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
 
