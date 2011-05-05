@@ -15,8 +15,9 @@
 <h2>help! Something's not quite right!</h2>
 <p>
 	All http codes have a special meaning. Some, like the 10.x family or some of the 30.x ones, instruct the browser to wait or to try another location.
-	Hence you won't necessarily always get a proper response from a web browser.
+	Hence you won't necessarily always get a proper response from a web browser. If you use a tool like curl, though, you should get the correct response with the appropriate status, and this should return a response:
 </p>
+<center><b>curl -0v <%= url('/k/100') %></b></center>
 <p>
 	As kodes is being developed, more functionality will be added to cover these specific cases, but in the mean time, check out the specs to see if you are not requesting an http code that won't give a reply! <a href="http://ekx.im/9">HTTP/1.1: Status Code Definitions</a>
 </p>
