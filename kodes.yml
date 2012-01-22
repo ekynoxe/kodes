@@ -140,7 +140,7 @@
     link: "http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.18"
 418:
     name: "I'm a teapot"
-    description: "This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. However, known implementations do exist."    
+    description: "This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. However, known implementations do exist. <br/><img src='/talk_to_the_teapot.jpg' alt='teapot' /><br/><small>(If you're the author of this image, please get in touch co I can credit you!)</small>"
 500:
     name: "Internal Server Error"
     description: "The server encountered an unexpected condition which prevented it from fulfilling the request."
