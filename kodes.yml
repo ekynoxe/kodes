@@ -138,6 +138,9 @@
     name: "Expectation Failed"
     description: "The expectation given in an Expect request-header field could not be met by this server, or, if the server is a proxy, the server has unambiguous evidence that the request could not be met by the next-hop server."
     link: "http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.18"
+418:
+    name: "I'm a teapot"
+    description: "This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. However, known implementations do exist."    
 500:
     name: "Internal Server Error"
     description: "The server encountered an unexpected condition which prevented it from fulfilling the request."
