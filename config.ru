@@ -1,2 +1,2 @@
-require 'kodes'
+require './kodes'
 run Sinatra::Application
