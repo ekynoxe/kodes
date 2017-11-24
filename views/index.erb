@@ -1,23 +1,14 @@
 <p><em>&#8220;kodes is a simple service that allows you to test that your applications handle HTTP response codes properly&#8221;</em></p>
-<h2>usage</h2>
+<h2>Usage</h2>
 <p>using kodes is easy: simply redirect your HTTP calls to a url in the following format</p>
 <center><b><%= url('/k/') %><span class="coloured">&lt;http-code&gt;</span></b></center>
 <p>The response you get will have the required HTTP status code, as well as a description of the code itself if you forgot it!</p>
-<h2>try them!</h2>
+<h2>Codes</h2>
 <ul>
 	<% @codes.each do |index,k| %>
-	<li><a href="<%= url('/k/'+index.to_s) %>"><%= index.to_s %></a></li>
+	<li><a href="<%= url('/c/'+index.to_s) %>"><%= index.to_s %></a></li>
 	<% end %>
 </ul>
 <p>
-	<small>Check your browser console for the http status of the response</small>
-</p>
-<h2>help! Something's not quite right!</h2>
-<p>
-	All http codes have a special meaning. Some, like the 10.x family or some of the 30.x ones, instruct the browser to wait or to try another location.
-	Hence you won't necessarily always get a proper response from a web browser. If you use a tool like curl, though, you should get the correct response with the appropriate status, and this should return a response:
-</p>
-<center><b>curl -0v <%= url('/k/100') %></b></center>
-<p>
-	As kodes is being developed, more functionality will be added to cover these specific cases, but in the mean time, check out the specs to see if you are not requesting an http code that won't give a reply! <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions</a>
+	HTTP 1.1 specs are here in case one isn't on Kodes: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">HTTP/1.1: Status Code Definitions</a>
 </p>

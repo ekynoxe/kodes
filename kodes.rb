@@ -14,23 +14,32 @@ get '/' do
   erb :index
 end
 
+get '/c/:code' do
+  @code = match_code(params[:code])
+
+  erb :kode
+end
+
 get '/k/:code' do
+  @code = match_code(params[:code])
+  status @code
+
+  erb :kode
+end
+
+def match_code(code)
   reg = /^\d+$/
   if !reg.match(params[:code]) || !CODES.has_key?(params[:code].to_i)
     raise Sinatra::NotFound
     return
   end
-  
-# Todo - Here should be handlers to take care of each code specifics if required (eg 1xx that doesn't return anything in a browser')
-  @code = params[:code].to_i
-  status @code
-  
-  erb :kode
+
+  return code.to_i
 end
 
 ### Error handling
 not_found do
   @code = 404
-  
+
   erb :kode
 end
